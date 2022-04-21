@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+ /* Global style  */
+:root {
+  --bg-dark: #000000;
+  --bg-light: #dddddd;
+  --bg-supper-light: #eff0f4;
+  --text-black-900: #000000;
+  --text-black-700: #555555;
+  --text-black-600: #666666;
+  --text-black-300: #bbbbbb;
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-0: 0px 0px 0px #d0d0d0, 0px 0px 0px #f8f8f8;
+  --inset-shadow: inset 3px 3px 3px #d0d0d0, inset 3px 3px 3px #f8f8f8;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--bg-supper-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none
+}
+::before, ::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.hover-in-shadow {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-in-shadow:hover {
+  box-shadow: var(--outer-shadow-0)
+}
+
+
+  
+/* Header */
+
+.header {
+  padding: 20px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.header .logo a{
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--pink);
+  color: var(--pink);
+  border-radius: 50%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.header .hamburger-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: var(--outer-shadow)
+}
+
+.header .hamburger-btn span {
+  width: 16px;
+  height: 2px;
+  display: block;
+  background-color: var(--bg-dark);
+  position: relative;
+  border-radius: 10px;
+}
+.header .hamburger-btn span::before,
+.header .hamburger-btn span::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height:100%;
+  left: 0;
+  background-color: var(--bg-dark);
+  border-radius: 10px;
+}
+.header .hamburger-btn span::before{
+  top: -6px;
+}
+.header .hamburger-btn span::after{
+  top: 6px;
+}
+
