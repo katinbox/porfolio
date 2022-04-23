@@ -1,3 +1,38 @@
+(()=>{
+  const hamburgerBtn = document.querySelector('.hamburger-btn'),
+    navMenu = document.querySelector('.nav-menu'),
+    closeNavBtn = document.querySelector('.close-nav-menu'),
+    navMenuItems = navMenu.querySelectorAll('.nav-menu-inner ul li a')
+
+    hamburgerBtn.addEventListener('click', showNavMenu);
+    closeNavBtn.addEventListener('click', hideNavMenu);
+
+    function showNavMenu() {
+      navMenu.classList.add('open')
+    }
+
+    function hideNavMenu() {
+      navMenu.classList.remove('open');
+      fadeOutEffect()
+    }
+
+    function fadeOutEffect() {
+      document.querySelector('.fade-out-effect').classList.add('active')
+      setTimeout(() => document.querySelector('.fade-out-effect').classList.remove('active'), 300)
+    }
+
+    navMenuItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        hideNavMenu();
+        const itemActive = navMenu.querySelector('.active')
+        itemActive.classList.remove('active', 'hover-in-shadow', 'inner-shadow')
+        itemActive.classList.add('outer-shadow')
+        e.target.classList.add('active', 'inner-shadow')
+      })
+    })
+
+})();
+
 (() => {
   const filterContainer = document.querySelector(".porfolio-filter"),
     porfolioItems = document.querySelectorAll(".porfolio-item")
