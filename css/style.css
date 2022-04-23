@@ -61,6 +61,10 @@ img {
   flex-wrap: wrap;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -94,6 +98,7 @@ img {
   left: 0;
   top: 0;
   transition: all .3s ease;
+  z-index: -1;
 }
 
 .hover-in-shadow:hover:after {
@@ -283,6 +288,7 @@ img {
   white-space: nowrap;
   text-transform: capitalize;
   display: block;
+  border: none;
 }
 .btn-1:hover {
   box-shadow: var(--inset-shadow)
@@ -605,6 +611,165 @@ img {
 }
 .porfolio-section .porfolio-item-inner:hover img {
   transform: translateY(-15%);
+}
+
+/* Testerminal */
+.testerminal-section {
+  min-height: 100vh;
+  padding: 80px 0 80px;
+}
+
+.testerminal-section .testi-container{
+  display: flex;
+  transition: margin 1s ease;
+}
+.testerminal-section .testi-box {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.testerminal-section .testti-slider {
+  border-radius: 5px;
+  margin: 0 0 30px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.testerminal-section .testi-item{
+  text-align: center;
+  padding: 30px;
+}
+
+.testerminal-section .testi-item i {
+  position: absolute;
+  font-size: 30px;
+  color: var(--text-black-600);
+  opacity: 0.3;
+}
+
+.testerminal-section .testi-item i.left {
+  top: 5px;
+  left: 5px;
+}
+.testerminal-section .testi-item i.right {
+  bottom: 5px;
+  right: 5px;
+}
+.testerminal-section .testi-item p {
+  margin: 0 0 30px;
+  color: var(--text-black-600)
+}
+.testerminal-section .testi-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 0 15px;
+}
+.testerminal-section .testi-item span {
+  display: block;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.testerminal-section .testti-slider-nav {
+  text-align: center;
+}
+.testerminal-section .testti-slider-nav span {
+  padding: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  color: var(--pink);
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.testerminal-section .testti-slider-nav span:after {
+  border-radius: 50%;
+}
+
+/* Contact */
+
+.contact-section {
+  width: 100%;
+  min-width: 100vh;
+  margin: 80px 0 80px;
+  --colums: 3;
+  --spacing: 15px;
+}
+
+.contact-section .contact-item {
+  flex: 0 0 calc(100% / var(--colums));
+  padding: var(--spacing);
+  display: flex;
+  margin: 0 0 30px;
+}
+.contact-section .contact-item-inner {
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+}
+.contact-section .contact-item-inner i {
+  color: var(--pink);
+  font-size: 2rem;
+}
+.contact-section .contact-item-inner span {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--text-black-700);
+  font-weight: 600;
+  margin: 10px 0 5px;
+  text-transform: capitalize;
+}
+.contact-section .contact-item-inner p {
+  font-size: 1.4rem;
+  color: var(--text-black-700);
+  font-weight: 300;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.contact-section .contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact-section .w-50 {
+  padding: 0 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.contact-section .input-group {
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.contact-section .input-control {
+  border-radius: 30px;
+  width: 100%;
+  display: block;
+  height: 45px;
+  margin: 0 0 15px;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  background-color: transparent;
+  color: var(--text-black-700);
+  font-weight: 400;
+}
+.contact-section textarea.input-control {
+  height: 180px;
+  padding-top: 15px;
+  resize: none;
+}
+
+.contact-section .submit-btn button::after {
+  border-radius: 30px;
 }
 /* ------------------------ */
 @media (max-width: 768px) {
